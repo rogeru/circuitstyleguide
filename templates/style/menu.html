@@ -1,10 +1,19 @@
-<a class="kalei-styleguide-menu-heading" href="#"><%= menuTitle %></a>
+<div class="kalei-styleguide-header">
+    <img src="../../images/logo.png"/>
+    <span>Style Guide</span>
+</div>
+<div class="kalei-styleguide-title">Documentation</div>
+<div class="kalei-styleguide-search"><input type="text" placeholder="Search Docs: e.g. buttons"></div>
+<div class="kalei-styleguide-switcher">
+    <select>
+        <option value="web">Platform: Web</option>
+        <option value="ios">Platform: iOS</option>
+        <option value="android">Platform: Android</option>
+        <option value="windows">Platform: Windows Phone</option>
+    </select>
+</div>
 <div class="menu-items">
 	<ul class="kalei-styleguide-menu">
-		<li data-sheet="<%= entry %>">
-            <a class="kalei-styleguide-menu-link js-kalei-home" href="#" ><%= entry %></a>
-           <div class="kalei-sheet-submenu"></div>
-		</li>
 	<% _.each(menus, function (menu) { %>
 		<li>
 			<%= menu.category %>
@@ -12,9 +21,8 @@
 			<ul class="kalei-styleguide-menu">
 				<% _.each(menu.sheets, function (sheet) { %>
 
-				<li data-sheet="<%= sheet %>"><a class="kalei-styleguide-menu-link" href="#/style/<%= sheet %>"><%= sheet %></a>
-					<div class="kalei-sheet-submenu">
-					</div>
+				<li class="kalei-styleguide-menu-item" data-sheet="<%= sheet.filename %>"><a class="kalei-styleguide-menu-link" href="#/style/<%= sheet.filename %>"><%= sheet.name %></a>
+<!--					<div class="kalei-sheet-submenu"></div>  -->
 
 				</li>
 				<% }); %>
@@ -27,8 +35,9 @@
 <style type="text/css" media="screen">
     .menu-items {
         position: absolute;
-        top: 75px;
-        left: 0;
+        top: 185px;
+        width: 100%;
+        left: 0px;
         bottom: 0 !important;
     }
     .kalei-styleguide-menu-heading {

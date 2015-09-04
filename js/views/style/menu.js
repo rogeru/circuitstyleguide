@@ -136,7 +136,16 @@ console.log('found import', sheet);
 
                                     });
                                 } else if (rule.path != null) { //Import Rule
-                                    currentMenu.sheets.push(rule.path.value);
+                                    if (typeof rule.path.value === 'string') {
+                                        currentMenu.sheets.push(rule.path.value);
+                                    } else if (rule.path.value.value) {
+                                        var filename = rule.path.value.value.split('/').slice(-1)[0];
+                                        var name = filename.split('.')[0].capitalizeFirstLetter();
+                                        currentMenu.sheets.push({filename: filename, name: name});
+                                    } else {
+                                        currentMenu.sheets.push('unknown file');
+                                    }
+                                    
                                 }
                             });
 

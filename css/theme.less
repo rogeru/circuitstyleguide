@@ -9,7 +9,8 @@ The menu is **fixed** and the page contained simply aligns itself 200px from the
 
 html, body, .kalei {
   height: 100% !important;
-  background: #f6f4f4;
+  background: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -18,12 +19,66 @@ body {
   padding: 0 !important;
 }
 
+a {
+  color: #2f7d00;
+}
+
 .kalei-style-menu-container {
   position: fixed;
   width: 300px;
   height: 100%;
-  border-right: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #f0f0f0;
+}
+
+.kalei-styleguide-header {
+  height: 40px;
+  background-color: #2a3136;
+  color: #fff;
+}
+
+.kalei-styleguide-header>div {
+  padding: 10px 10px;
+}
+
+.kalei-styleguide-header>img {
+  width: 80px;
+  padding: 7px 0px 0px 12px;
+}
+
+.kalei-styleguide-header>span {
+  vertical-align: top;
+  top: 15px;
+  position: relative;
+  left: 0px;
+  font-size: 14px;
+}
+
+.kalei-styleguide-title {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 30px 10px 0px 16px
+}
+
+.kalei-styleguide-search {
+  height: 50px;
+}
+.kalei-styleguide-search>input{
+  margin: 15px;
+  height: 25px;
+  width: 252px;
+  padding-left: 10px;
+  font-size: 12px;
+  outline: none;
+}
+
+.kalei-styleguide-switcher {
+  height: 50px;
+}
+.kalei-styleguide-switcher>select {
+  font-size: 14px;
+  margin: 15px;
+  height: 25px;
+  width: 265px
 }
 
 .kalei-styleguide-menu {
@@ -35,7 +90,7 @@ body {
 .kalei-style-page {
   margin-left: 300px;
   padding: 20px;
-  background-color: #f6f4f4;
+  background-color: white;
 }
 
 /*
@@ -65,27 +120,52 @@ body {
 .kalei-comments > h4,
 .kalei-comments > h5,
 .kalei-comments > h5,
-.kalei-comments > h6,
 .kalei-comments > ul,
 .kalei-comments > ol,
 .kalei-comments > p a,
 .kalei-comments > p a:visited,
 .kalei-comments > a:visited,
 .kalei-comments > a,
+.kalei-comments > table,
 .kalei-styleguide-menu-heading > h1,
 .kalei-styleguide-menu > li > h3,
 .kalei-sheet-submenu li,
 .kalei-styleguide-menu-stylesheets,
 .kalei-comments > p {
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   color: #444;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.kalei-comments > .codedemo {
+  margin-top: 10px;
+}
+
+.kalei-comments > table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  td, th {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #f0f0f0;
+  }
+}
+
+// Use as uppercase mini header
+.kalei-comments > h6 {
+  margin: 0;
+  padding: 10px 10px 0 0;
+  color: #444;
+  text-transform: uppercase;
 }
 
 .kalei-comments> p a,
 .kalei-comments> p a:visited {
+  color: #2f7d00;
   padding: 0;
+  text-decoration: none;
 }
 
 .kalei-comments > iframe {
@@ -101,7 +181,11 @@ body {
 .kalei-comments > ul,
 .kalei-comments > ol,
 .kalei-comments > p {
-  font-size: 12px;
+  font-size: 14px;
+  color: #7c7b7f;
+  strong {
+    color: #444;
+  }
 }
 
 /*
@@ -180,7 +264,7 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 
 .kalei-comments >  pre {
   position: relative;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 20px;
   border: 1px solid #ebebeb;
   border-top: none;
@@ -196,7 +280,6 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
   color: #ebebeb;
   font-size: 12px;
   font-weight: bold;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 0 0 4px 0;
   background-color: #444;
   opacity: 0.3;
@@ -207,15 +290,17 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 }
 
 .kalei-comments {
-  padding: 20px;
-  margin: 0 0 20px 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fff;
+  padding: 0px 0px 10px 0px;
+}
+
+hr {
+  .kalei-comments & {
+    margin-top: 30px;
+    background-color: #b3b2b4;
+    border: 0 none;
+    color: #b3b2b4;
+    height: 1px
+  }
 }
 
 body .codedemo {
@@ -258,7 +343,6 @@ body .codedemo:after {
   color: #ebebeb;
   font-size: 12px;
   font-weight: bold;
-  font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 3px 0 3px 0;
   background-color: #444;
 }
@@ -274,6 +358,7 @@ body .codedemo:after {
   text-shadow: 0 0 1px #777;
 }
 
+
 .kalei-styleguide-menu > li > h3 {
   margin-top: 20px;
   padding-left: 20px;
@@ -287,32 +372,16 @@ body .codedemo:after {
   display: block;
   position: relative;
   height: 100%;
-  padding: 10px 0 10px 30px;
-  color: #555;
-  font-weight: bold;
-  font-family: Arial;
-  font-size: 14px;
+  padding: 7px 0 7px 18px;
+  font-size: 12px;
   text-decoration: none;
 }
 
-
-.kalei-styleguide-menu-link:hover,
-.kalei-styleguide-menu-link.active {
-  color: #ebebeb;
-  background-color: #444;
+.kalei-styleguide-menu-item:hover, .kalei-styleguide-menu-item>a.active {
+  background-color: #e2e2e2;
 }
-
-.kalei-styleguide-menu-link:hover:after,
-.kalei-styleguide-menu-link.active:after {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  margin-top: -6px;
-  border-width: 6px 0 6px 6px;
-  border-style: solid;
-  border-color: transparent #f7f7f7;
+.kalei-styleguide-menu-link.active {
+//  font-weight: bold;
 }
 
 .kalei-sheet-submenu li.active {

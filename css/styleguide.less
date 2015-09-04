@@ -1,0 +1,78 @@
+// This file defines styles used by HTML comments in the actual Circuit LESS files
+// The reason these styles are here is so that they don't get delivered with the Circuit LESS files.
+
+@import url("../web/variables.less");
+
+.styleguide.colors {
+  display: flex;
+  flex-wrap: wrap;
+  >div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: black;
+    line-height: 100px;
+    text-align: center;
+    background: #000;
+    margin: 5px;
+
+    &.charcoal {
+      background-color: @charcoal;
+      color: white;
+    }
+    &.charcoal75 {
+      background-color: @charcoal75;
+      color: white;
+    }
+    &.charcoal50 {
+      background-color: @charcoal50;
+      color: white;
+    }
+    &.charcoal25 {
+      background-color: @charcoal25;
+      color: white;
+    }
+    &.white {
+      background-color: @white;
+      border: 1px solid black;
+    }
+    &.black {
+      background-color: @white;
+      color: white;
+    }
+    &.red {
+      background-color: @red;
+      color: white;
+    }
+    &.yellow {
+      background-color: @yellow;
+    }
+    &.darkGreen {
+      background-color: @darkGreen;
+      color: white;
+    }
+    &.green {
+      background-color: @green;
+    }
+    &.grey {
+      background-color: @grey;
+    }
+    &.lightGrey {
+      background-color: @lightGrey;
+    }
+    &.lightRed {
+      background-color: @lightRed;
+      color: white;
+    }
+    &.linkLightGreen {
+      background-color: @linkLightGreen;
+    }
+    &.linkDarkGreen {
+      background-color: @linkDarkGreen;
+      color: white;
+    }
+  }
+}
+
+

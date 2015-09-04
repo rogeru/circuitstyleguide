@@ -9,7 +9,7 @@ require.config({
     less: 'libs/less/less-1.7.3',
     jscssp: 'libs/jscssp/jscssp',
     fixie: 'libs/fixie/fixie',
-	pagedown: 'libs/pagedown/converter',
+	  pagedown: 'libs/pagedown/converter',
 
     // Require.js plugins
     text: 'libs/require/text',
@@ -19,12 +19,10 @@ require.config({
     // When you have HTML/CSS designers this aids in keeping them out of the js directory
     templates: '../templates'
   },
-	urlArgs: "bust=" +  (new Date()).getTime()
-
+//	urlArgs: "bust=" +  (new Date()).getTime()
 });
 
 // Let's kick off the application
-
 require([
   'views/app',
   'router',

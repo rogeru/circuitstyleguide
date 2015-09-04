@@ -1,0 +1,179 @@
+/* 
+# Variables
+This file contains global variables such as colors.
+
+######Less Definitions 
+<img src="/images/less-file.png" style="height: 20px;vertical-align: bottom;">
+[variables.less](/web/variables.less)
+
+***
+
+##General color principles
+Discretion and visual calmness is one of the core principles for color for Ansible. The conversations between people build the core focus of Ansible and are where the application can be vibrant, lively, and playful.
+
+### Discretion and visual calmness
+* Whites and grays
+* Soft gradients
+* Subtle drop shadows
+* Light textured pattern
+
+###Let the content shine
+* Content provides color and vibrancy
+* Large visual preview for attachments, links, and maps
+* Gallery preview for multiple attachments
+* In-app video preview
+
+###Color palette
+<section class="styleguide colors">
+  <div class="charcoal">charcoal</div>
+  <div class="charcoal75">charcoal75</div>
+  <div class="charcoal50">charcoal50</div>
+  <div class="charcoal25">charcoal25</div>
+  <div class="white">white</div>
+  <div class="red">red</div>
+  <div class="yellow">yellow</div>
+  <div class="darkGreen">darkGreen</div>
+  <div class="green">green</div>
+  <div class="grey">grey</div>
+  <div class="lightGrey">lightGrey</div>
+  <div class="lightRed">lightRed</div>
+  <div class="linkLightGreen">linkLightGreen</div>
+  <div class="linkDarkGreen">linkDarkGreen</div>
+</section>  
+<div style="clear:both; height: 20px;"></div>
+
+Color Name | R | G | B | HEX
+--- | --- | ---
+Charcoal | 42 | 49 | 54 | `2a3136`
+Charcoal75 | 82 | 84 | 89 | `525459`
+Charcoal50 | 124 | 123 | 127 | `7c7b7f`
+Charcoal25 | 179 | 178 | 180 | `b3b2b4`
+White | 255 | 255 | 255 | `ffffff`
+Red | 194 | 32 | 38 | `c22026`
+LightRed | 249 | 42 | 50 | `f92a32`
+Yellow | 255 | 239 | 56 | `ffef38`
+DarkGreen | 73 | 112 | 52 | `497034`
+Green | 136 | 197 | 65 | `88c541`
+Grey | 218 | 218 | 218 | `dadada`
+LightGrey | 240 | 240 | 240 | `f0f0f0`
+LinkLightGreen | 175 | 238 | 92 | `afee5c`
+LinkDarkGreen | 47 | 125 | 0 | `2f7d00`
+*/
+
+
+
+
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+
+// Confluence Defined Colors
+// -------------------------
+@charcoal:          #2a3136;
+@charcoal75:        #525459;
+@charcoal50:        #7c7b7f;
+@charcoal25:        #b3b2b4;
+@white:             #ffffff;
+@black:             #000000;
+@red:               #c22026;
+@yellow:            #ffef38;
+@darkGreen:         #497034;
+@green:             #88c541;
+@grey:              #dadada;
+@lightGrey:         #f0f0f0;
+@lightRed:          #f92a32;
+@linkLightGreen:    #afee5c;
+@linkDarkGreen:     #2f7d00;
+
+// New added colors
+@lightTintGrey:     #f9f9f9;
+@charcoalBlack50:   #15181b;
+@charcoalBlack30:   #1d2226;
+@lightCharcoal:     #374046;
+
+
+// Other Colors
+// -------------------------
+@blue:              #0094ff;
+@orange:            #fe8900;
+@mediumGrey:        #9a9a9f;
+@darkBlue:          #374457;
+
+
+// Background
+// -------------------------
+@backgroundActionBar:   #999;
+
+
+// Animations
+// -------------------------
+@list_item_transition_time: 0.20s;
+@animationLength:           0.5s;
+
+
+// Responsive variables
+//---------------------------------------
+@scale-text: 0; //text-scales 0px after 1200px
+@hiddenScrollbar: 674px;
+@thirdColumnWidth: 320px;
+@thirdColumnWidthClosed: 26px;
+@callStageThirdColumnWidth: 320px;
+@callStageThirdColumnWidthClosed: 26px;
+
+// Typography
+// -------------------------
+@baseFontSize:          12px;
+@baseFontFamily:        OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baseLineHeight:        18px;
+
+
+// Sprites
+// ------------------------------------------------------
+@icons_position_item_type_unread:   -57px;
+@sprite_channels_large_unread:      -47px;
+
+
+// Layout variables
+// ------------------------------------------------------
+@filterHeight:                      30px;
+@rightHeaderHeight:                 90px;
+@newItemBarHeight:                  40px;
+@headerHeight:                      40px;
+@conversationItemHeight:            70px;
+
+
+@leftColumnMinWidth:               240px;
+@leftColumnMaxWidth:               300px;
+@badgeWidthAndMargin:               60px;
+@leftColumnTimestampMaxWidth:       78px;
+@attachmentsMediaHeader:            40px;
+@emoticonsPopoverWidth:            198px;
+
+//Feed Item
+// ------------------------------------------------------
+@feedItemMarginLeftRight:           20px;
+@avatar-feed-shadow: 0px 0px 0px 1px fade(@black, 10%);
+@avatar-feed-shadow-hover: 0px 0px 0px 1px fade(@black, 20%);
+
+//Conversation Feed Input
+// ------------------------------------------------------
+@chat_input_padding_top_normal: 11px;
+@chat_input_padding_bottom_normal: 12px;
+
+@chat_input_padding_top_small: 3px;
+@chat_input_padding_bottom_small: 4px;
+@chat_input_padding_small: 2px;
+
+@chat_input_padding: 5px;
+
+@flexible_input_padding_left_right: 2px; //use this padding to every element that needs to be aligned with the flexible inputs content
+
+@deep: ~'/deep/';//Selector to access shadow-dom elements
+
+
+//Avatars
+//-----------------------------------------------------------
+@availability-ring-width: 2px;
+@avatar-medium-width: 45px;
+@avatar-medium-height: 45px;

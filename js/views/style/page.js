@@ -253,15 +253,9 @@ function($, _, Backbone, marked, stylePageTemplate, config, jscssp, less, Pagedo
                             return_val.push(block);
                             block = _.clone(block_def);
                         }
-                        if (comment.depth <= 2) {
+                        if (comment.depth <= 6) {
                             block.heading = comment.text;
                             block.content.push(comment);
-                        } else if (comment.depth == 3) { //Import statement title
-                            block.stylesheet = comment.text;
-                            //block.heading = "Stylesheets"
-                            //this is an import statement
-                            //if ($.inArray("Stylesheets", ))
-                            //console.log("else", comment)
                         }
                         break;
                     default:
